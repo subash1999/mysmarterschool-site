@@ -1,0 +1,11 @@
+dist/
+node_modules/
+.DS_Store
+.env*
+*.log
+reports/*-preview.webp
+reports/lighthouse-*.html
+reports/*-preview.png
+reports/lighthouse-*.json
+!reports/lighthouse-summary.json
+__pycache__/

@@ -1,0 +1,327 @@
+{
+  "school": "Demo Academy",
+  "data": "DatabaseSeeder + synthetic supplement; no imports",
+  "capturedAt": "2026-10-18T21:24:01.459Z",
+  "screens": [
+    {
+      "screen": "super-admin-schools",
+      "role": "Super Admin",
+      "caption": "Super admin: manage school records.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "super-admin-schools-desktop.webp",
+      "path": "/super-admin/school"
+    },
+    {
+      "screen": "admin-dashboard",
+      "role": "School Admin",
+      "caption": "School admin overview for the fictional Demo Academy.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "admin-dashboard-desktop.webp",
+      "path": "/school-admin"
+    },
+    {
+      "screen": "admin-sessions",
+      "role": "School Admin",
+      "caption": "Set up and select an academic session.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "admin-sessions-desktop.webp",
+      "path": "/school-admin/school_session"
+    },
+    {
+      "screen": "admin-grades",
+      "role": "School Admin",
+      "caption": "Organize grades within the selected session.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "admin-grades-desktop.webp",
+      "path": "/school-admin/grade"
+    },
+    {
+      "screen": "admin-subjects",
+      "role": "School Admin",
+      "caption": "Maintain the school subject list.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "admin-subjects-desktop.webp",
+      "path": "/school-admin/subject"
+    },
+    {
+      "screen": "admin-students",
+      "role": "School Admin",
+      "caption": "Browse synthetic student records.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "admin-students-desktop.webp",
+      "path": "/school-admin/student"
+    },
+    {
+      "screen": "admin-exams",
+      "role": "School Admin",
+      "caption": "Set up an examination group for the academic session.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "admin-exams-desktop.webp",
+      "path": "/school-admin/exam-group"
+    },
+    {
+      "screen": "admin-calendar",
+      "role": "School Admin",
+      "caption": "School calendar and a fictional parent–teacher meeting.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "admin-calendar-desktop.webp",
+      "path": "/school-admin/school-calendar"
+    },
+    {
+      "screen": "teacher-attendance",
+      "role": "Teacher",
+      "caption": "Record attendance for a grade, subject and date.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "teacher-attendance-desktop.webp",
+      "path": "/teacher/student-attendance/edit?school_session=1&grade=1&subject=1&date=2026-10-19"
+    },
+    {
+      "screen": "accountant-fees",
+      "role": "Accountant",
+      "caption": "Configure grade fee structures. Amounts are illustrative.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "accountant-fees-desktop.webp",
+      "path": "/accountant/grade-fee"
+    },
+    {
+      "screen": "accountant-batch-print",
+      "role": "Accountant",
+      "caption": "Review monthly bills and select bills for batch printing.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "accountant-batch-print-desktop.webp",
+      "path": "/accountant/claim-bills/monthly/1/6"
+    },
+    {
+      "screen": "accountant-report",
+      "role": "Accountant",
+      "caption": "Filter the fee collection report by academic session and dates.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "accountant-report-desktop.webp",
+      "path": "/accountant/fees-collection-report"
+    },
+    {
+      "screen": "guardian-dashboard",
+      "role": "Guardian",
+      "caption": "Guardian dashboard linked to synthetic student records.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "guardian-dashboard-desktop.webp",
+      "path": "/guardian"
+    },
+    {
+      "screen": "super-admin-schools",
+      "role": "Super Admin",
+      "caption": "Super admin: manage school records.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "super-admin-schools-mobile.webp",
+      "path": "/super-admin/school"
+    },
+    {
+      "screen": "admin-dashboard",
+      "role": "School Admin",
+      "caption": "School admin overview for the fictional Demo Academy.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "admin-dashboard-mobile.webp",
+      "path": "/school-admin"
+    },
+    {
+      "screen": "admin-sessions",
+      "role": "School Admin",
+      "caption": "Set up and select an academic session.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "admin-sessions-mobile.webp",
+      "path": "/school-admin/school_session"
+    },
+    {
+      "screen": "admin-grades",
+      "role": "School Admin",
+      "caption": "Organize grades within the selected session.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "admin-grades-mobile.webp",
+      "path": "/school-admin/grade"
+    },
+    {
+      "screen": "admin-subjects",
+      "role": "School Admin",
+      "caption": "Maintain the school subject list.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "admin-subjects-mobile.webp",
+      "path": "/school-admin/subject"
+    },
+    {
+      "screen": "admin-students",
+      "role": "School Admin",
+      "caption": "Browse synthetic student records.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "admin-students-mobile.webp",
+      "path": "/school-admin/student"
+    },
+    {
+      "screen": "admin-exams",
+      "role": "School Admin",
+      "caption": "Set up an examination group for the academic session.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "admin-exams-mobile.webp",
+      "path": "/school-admin/exam-group"
+    },
+    {
+      "screen": "admin-calendar",
+      "role": "School Admin",
+      "caption": "School calendar and a fictional parent–teacher meeting.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "admin-calendar-mobile.webp",
+      "path": "/school-admin/school-calendar"
+    },
+    {
+      "screen": "teacher-attendance",
+      "role": "Teacher",
+      "caption": "Record attendance for a grade, subject and date.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "teacher-attendance-mobile.webp",
+      "path": "/teacher/student-attendance/edit?school_session=1&grade=1&subject=1&date=2026-10-19"
+    },
+    {
+      "screen": "accountant-fees",
+      "role": "Accountant",
+      "caption": "Configure grade fee structures. Amounts are illustrative.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "accountant-fees-mobile.webp",
+      "path": "/accountant/grade-fee"
+    },
+    {
+      "screen": "accountant-batch-print",
+      "role": "Accountant",
+      "caption": "Review monthly bills and select bills for batch printing.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "accountant-batch-print-mobile.webp",
+      "path": "/accountant/claim-bills/monthly/1/6"
+    },
+    {
+      "screen": "accountant-report",
+      "role": "Accountant",
+      "caption": "Filter the fee collection report by academic session and dates.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "accountant-report-mobile.webp",
+      "path": "/accountant/fees-collection-report"
+    },
+    {
+      "screen": "guardian-dashboard",
+      "role": "Guardian",
+      "caption": "Guardian dashboard linked to synthetic student records.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "guardian-dashboard-mobile.webp",
+      "path": "/guardian"
+    },
+    {
+      "screen": "accountant-monthly-bills",
+      "role": "Accountant",
+      "caption": "Choose a grade, month and fee items for monthly bills.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "accountant-monthly-bills-desktop.webp",
+      "path": "/accountant/claim-bills/createMonthly?schoolSession=1&grade=1&month=6"
+    },
+    {
+      "screen": "guardian-results",
+      "role": "Guardian",
+      "caption": "View a first term result from the guardian role.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "guardian-results-desktop.webp",
+      "path": "/guardian/exam_group/1/1/view_marks"
+    },
+    {
+      "screen": "accountant-monthly-bills",
+      "role": "Accountant",
+      "caption": "Choose a grade, month and fee items for monthly bills.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "accountant-monthly-bills-mobile.webp",
+      "path": "/accountant/claim-bills/createMonthly?schoolSession=1&grade=1&month=6"
+    },
+    {
+      "screen": "guardian-results",
+      "role": "Guardian",
+      "caption": "View a first term result from the guardian role.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "guardian-results-mobile.webp",
+      "path": "/guardian/exam_group/1/1/view_marks"
+    },
+    {
+      "screen": "teacher-marks",
+      "role": "Teacher",
+      "caption": "Enter subject marks for the first term examination.",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "file": "teacher-marks-desktop.webp",
+      "path": "/teacher/exam-group/1/1/edit_marks"
+    },
+    {
+      "screen": "teacher-marks",
+      "role": "Teacher",
+      "caption": "Enter subject marks for the first term examination.",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "file": "teacher-marks-mobile.webp",
+      "path": "/teacher/exam-group/1/1/edit_marks"
+    }
+  ]
+}
