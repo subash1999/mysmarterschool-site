@@ -1,0 +1,110 @@
+[
+  {
+    "page": "/",
+    "device": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "lighthouseVersion": "12.8.2",
+    "fetchTime": "2026-10-18T21:28:40.261Z",
+    "url": "http://127.0.0.1:8035/"
+  },
+  {
+    "page": "/about/",
+    "device": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "lighthouseVersion": "12.8.2",
+    "fetchTime": "2026-10-18T20:56:28.785Z",
+    "url": "http://127.0.0.1:8035/about/"
+  },
+  {
+    "page": "/guide/",
+    "device": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "lighthouseVersion": "12.8.2",
+    "fetchTime": "2026-10-18T20:56:39.173Z",
+    "url": "http://127.0.0.1:8035/guide/"
+  },
+  {
+    "page": "/guide/super-admin/",
+    "device": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "lighthouseVersion": "12.8.2",
+    "fetchTime": "2026-10-18T20:56:49.638Z",
+    "url": "http://127.0.0.1:8035/guide/super-admin/"
+  },
+  {
+    "page": "/guide/admin/",
+    "device": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "lighthouseVersion": "12.8.2",
+    "fetchTime": "2026-10-18T20:57:00.171Z",
+    "url": "http://127.0.0.1:8035/guide/admin/"
+  },
+  {
+    "page": "/guide/teacher/",
+    "device": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "lighthouseVersion": "12.8.2",
+    "fetchTime": "2026-10-18T21:28:51.198Z",
+    "url": "http://127.0.0.1:8035/guide/teacher/"
+  },
+  {
+    "page": "/guide/accountant/",
+    "device": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "lighthouseVersion": "12.8.2",
+    "fetchTime": "2026-10-18T20:57:21.920Z",
+    "url": "http://127.0.0.1:8035/guide/accountant/"
+  },
+  {
+    "page": "/guide/guardian/",
+    "device": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "lighthouseVersion": "12.8.2",
+    "fetchTime": "2026-10-18T20:57:32.502Z",
+    "url": "http://127.0.0.1:8035/guide/guardian/"
+  },
+  {
+    "page": "/",
+    "device": "desktop",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "lighthouseVersion": "12.8.2",
+    "fetchTime": "2026-10-18T21:29:01.801Z",
+    "url": "http://127.0.0.1:8035/"
+  }
+]

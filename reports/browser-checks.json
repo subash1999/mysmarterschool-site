@@ -1,0 +1,204 @@
+{
+  "checks": [
+    {
+      "device": "desktop",
+      "path": "/",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/about/",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/guide/",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/guide/super-admin/",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/guide/admin/",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/guide/teacher/",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/guide/accountant/",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/guide/guardian/",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/404.html",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/about/",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/guide/",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/guide/super-admin/",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/guide/admin/",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/guide/teacher/",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/guide/accountant/",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/guide/guardian/",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/404.html",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "overflow": false,
+      "imagesLoaded": true,
+      "scriptCount": 0,
+      "jsErrors": []
+    }
+  ],
+  "internalLinksChecked": 52,
+  "externalSubresources": 0
+}

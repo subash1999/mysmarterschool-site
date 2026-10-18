@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /design/
+Disallow: /tools/
+Disallow: /reports/
+Sitemap: https://mysmarterschool.com/sitemap.xml

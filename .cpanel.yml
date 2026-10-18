@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - /usr/bin/python3 "$PWD/tools/deploy.py"

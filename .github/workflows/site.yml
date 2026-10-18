@@ -1,0 +1,82 @@
+name: Check and deploy Smart School site
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Check static pages and demo capture boundaries
+        run: |
+          python3 "$GITHUB_WORKSPACE/tools/check-static.py"
+          python3 -m unittest discover -s "$GITHUB_WORKSPACE/tools" -p '*_test.py'
+          node --test "$GITHUB_WORKSPACE/tools/safety.test.mjs"
+          python3 "$GITHUB_WORKSPACE/tools/build.py"
+
+  deploy:
+    needs: check
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency:
+      group: smart-school-site-production
+      cancel-in-progress: false
+    steps:
+      - name: Require configured SSH identity and verified host fingerprint
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST_FINGERPRINT: ${{ vars.SSH_HOST_FINGERPRINT }}
+        run: |
+          test -n "$SSH_HOST"
+          test -n "$SSH_PORT"
+          test -n "$SSH_USER"
+          test -n "$SSH_PRIVATE_KEY"
+          test -n "$SSH_HOST_FINGERPRINT"
+      - name: Deploy this exact checked commit to the marketing site only
+        uses: appleboy/ssh-action@0ff4204d59e8e51228ff73bce53f80d53301dee2 # v1
+        env:
+          SITE_COMMIT: ${{ github.sha }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ vars.SSH_HOST_FINGERPRINT }}
+          envs: SITE_COMMIT
+          command_timeout: 10m
+          script: |
+            set -eu
+            case "$SITE_COMMIT" in
+              ''|*[!0-9a-f]*) exit 1 ;;
+            esac
+            test "${#SITE_COMMIT}" -eq 40
+            SITE_REPOSITORY=/home/subashnc/repositories/mysmarterschool-site
+            test ! -L /home/subashnc/repositories
+            mkdir -p /home/subashnc/repositories
+            if [ ! -d "$SITE_REPOSITORY" ]; then
+              git clone https://github.com/subash1999/mysmarterschool-site "$SITE_REPOSITORY"
+            fi
+            test ! -L "$SITE_REPOSITORY"
+            test -z "$(git -C "$SITE_REPOSITORY" status --porcelain)"
+            test "$(git -C "$SITE_REPOSITORY" remote get-url origin)" = https://github.com/subash1999/mysmarterschool-site
+            git -C "$SITE_REPOSITORY" fetch origin "$SITE_COMMIT"
+            git -C "$SITE_REPOSITORY" checkout --detach "$SITE_COMMIT"
+            test "$(git -C "$SITE_REPOSITORY" rev-parse HEAD)" = "$SITE_COMMIT"
+            /usr/bin/python3 "$SITE_REPOSITORY/tools/deploy.py"
