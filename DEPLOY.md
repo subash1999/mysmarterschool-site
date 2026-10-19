@@ -30,12 +30,14 @@ The workflow reuses the existing app pipeline’s four secret **names**: `SSH_HO
 
 Checks run on PRs and pushes. After checks pass, an enabled push to `main` or manual run on `main` fetches that exact commit into `/home/subashnc/repositories/mysmarterschool-site` and runs the guarded publisher. It never invokes the app’s tenant deployment scripts. Actions are pinned to reviewed commits, deployments are serialized, and dirty or symlinked server checkouts are refused.
 
-One-time setup in the **new site repository**, after the owner approves its creation and first push:
+Production CI/CD was enabled on 2026-10-19. Every push to `main` runs checks and automatically publishes that exact checked commit. The [first Actions deployment succeeded](https://github.com/subash1999/mysmarterschool-site/actions/runs/39187043541/attempts/2); this route requires no cPanel deployment clicks.
 
-1. Add the four matching Actions secrets under **Settings → Secrets and variables → Actions**. Use the existing deployment-key source or enter the values through GitHub’s secrets UI. Do not print or commit private keys. The Mac’s default key was rejected by this server; that does not test the separate key stored in the app’s Actions secrets.
-2. Add Actions variable `SSH_HOST_FINGERPRINT` with `SHA256:zqrA1L0RCRtEq0o/mWL8Wr7FFRTxIPOp9TiK+sglzKA`. This ED25519 fingerprint was read from the host’s loopback SSH service through authenticated cPanel Terminal on 2026-10-19, and matched an independent scan of the public SSH endpoint. Reverify it through a trusted channel after a host-key change.
-3. Confirm the complete domain audit remains current and review the exact file list and write plan. Python 3.9.25 was verified on the host. SSH authentication with the pipeline’s key and the first publication still require verification.
-4. Set `DEPLOY_ENABLED` to the exact value `true` only when ready to activate publication. Until then, CI runs and deployment is skipped. The flag is initially unset.
+One-time configuration (completed for this repository):
+
+1. Store the four matching Actions secrets under **Settings → Secrets and variables → Actions**. The owner approved reusing the app pipeline’s existing server key. It was transferred directly into the encrypted secret without displaying its contents; the temporary local copy was deleted after the successful Actions deployment. The application repository and original server key remain unchanged.
+2. Set Actions variable `SSH_HOST_FINGERPRINT` to `SHA256:13RkNDZvbg//aHif6V4sXBapE1Rz6OdgF/sebfulvAA`. This is the host’s ECDSA key, negotiated by the pinned action. On 2026-10-19 it was read from the loopback SSH service through an authenticated connection pinned to the independently verified ED25519 key, and matched a separate public-endpoint scan. The ED25519 fingerprint is `SHA256:zqrA1L0RCRtEq0o/mWL8Wr7FFRTxIPOp9TiK+sglzKA`; substituting it for the action’s negotiated ECDSA key causes a fingerprint mismatch. Reverify through a trusted channel after any host-key change.
+3. Confirm the complete domain audit remains current and review the exact file list and write plan. Python 3.9.25, SSH authentication and the 48-file check-mode plan were verified before publication. The successful Actions log records the checked commit, completed backup and publication.
+4. `DEPLOY_ENABLED` is set to the exact value `true`. Set it to `false` to pause publication while retaining CI checks. Re-enable only after required root audits and write-plan checks are current.
 
 A changed domain mapping requires disabling deployment and repeating the UI audit. Changes to the public file set require a reviewed manifest update. The file guards establish filesystem boundaries; the UI audit establishes which domains serve those paths.
 
@@ -58,8 +60,8 @@ Official references: [cPanel deployment guide](https://docs.cpanel.net/knowledge
 
 ## After deployment
 
-Check the Actions result or report completion of the cPanel clicks, then verify HTTP 200 and title `Smart School — School management for Nepal` at `https://mysmarterschool.com/`. Check the guide, images and About page on desktop/mobile, and rerun public Lighthouse.
+Check the Actions result, then verify HTTP 200 and title `Smart School — School management for Nepal` at `https://mysmarterschool.com/`. Check the guide, images and About page on desktop/mobile, and rerun public Lighthouse.
 
-Only for the expressly requested post-deployment health check, make an unauthenticated status request to the production app and compare with its pre-deployment status. Do not log in, load school records or take tenant screenshots. That health verification is pending; no tenant app was contacted while making demo assets or auditing cPanel.
+Only for the expressly requested post-deployment health check, make an unauthenticated status request to the production app and compare with its pre-deployment status. Do not log in, load school records or take tenant screenshots. No tenant app was contacted while making demo assets or auditing cPanel. The pre-deployment status was recorded separately without saving response content. After the first Actions deployment, this network received cPGuard’s human-verification page on both domains; that response is not proof of either site’s health. Live title, hosted Lighthouse and the tenant-status comparison remain pending until the verification is cleared.
 
 If publication fails, inspect the reported backup and restore only affected product-site files. Never restore over a tenant directory. New files are preserved rather than deleted automatically.
